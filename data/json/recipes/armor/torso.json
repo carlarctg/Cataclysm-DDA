@@ -415,7 +415,7 @@
     "time": "20 m",
     "reversible": true,
     "autolearn": true,
-    "components": [ [ [ "tanned_pelt", 1 ], [ "sheet_fur_patchwork", 1 ] ] ],
+    "components": [ [ [ "tanned_pelt", 1 ],  ] ],
     "flags": [ "BLIND_HARD" ]
   },
   {
@@ -428,7 +428,7 @@
     "time": "20 m",
     "reversible": true,
     "autolearn": true,
-    "components": [ [ [ "tanned_hide", 1 ], [ "sheet_leather_patchwork", 1 ] ] ],
+    "components": [ [ [ "tanned_hide", 1 ],  ] ],
     "flags": [ "BLIND_HARD" ]
   },
   {

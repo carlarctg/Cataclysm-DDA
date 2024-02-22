@@ -254,33 +254,25 @@
     "color": "brown",
     "name": { "str": "tanned hide" },
     "description": "A folded 12-inch by 24-inch sheet of leather made from carefully tanned animal hide.  Can be cut up or used as is.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_leather",
+        "name": { "str": "leather sheet" },
+        "description": "A 12-inch by 24-inch sheet of leather.  Can be cut up or used as is."
+      },
+      {
+        "id": "sheet_leather_patchwork",
+        "name": { "str": "patchwork leather sheet" },
+        "description": "A folded 12-inch by 24-inch sheet of leather sewn together from patches.  Can be cut up or used as is."
+      }
+    ],
     "price": 5000,
     "price_postapoc": 500,
     "material": [ "leather" ],
     "weight": "296 g",
     "volume": "186 ml",
     "category": "spare_parts"
-  },
-  {
-    "type": "GENERIC",
-    "id": "sheet_leather",
-    "name": { "str": "leather sheet" },
-    "description": "A 12-inch by 24-inch sheet of leather.  Can be cut up or used as is.",
-    "category": "spare_parts",
-    "material": [ "leather" ],
-    "weight": "296 g",
-    "volume": "300 ml",
-    "price": 2500,
-    "price_postapoc": 250,
-    "symbol": ",",
-    "color": "brown"
-  },
-  {
-    "type": "GENERIC",
-    "id": "sheet_leather_patchwork",
-    "name": { "str": "patchwork leather sheet" },
-    "description": "A folded 12-inch by 24-inch sheet of leather sewn together from patches.  Can be cut up or used as is.",
-    "copy-from": "sheet_leather"
   },
   {
     "type": "GENERIC",
@@ -305,22 +297,16 @@
     "color": "brown",
     "name": { "str": "tanned pelt" },
     "description": "A folded sheet of fur made from carefully tanned animal pelt.  Can be cut up or used as is.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_fur_patchwork",
+        "name": { "str": "patchwork fur sheet" },
+        "description": "A folded 12-inch by 24-inch sheet of fur sewn together from patches.  Can be cut up or used as is."
+      }
+    ],
     "price": 5000,
     "price_postapoc": 500,
-    "material": [ "fur" ],
-    "weight": "372 g",
-    "volume": "465 ml",
-    "category": "spare_parts"
-  },
-  {
-    "type": "GENERIC",
-    "id": "sheet_fur_patchwork",
-    "symbol": ",",
-    "color": "brown",
-    "name": { "str": "patchwork fur sheet" },
-    "description": "A 12-inch by 24-inch sheet of fur sewn together from patches.  Can be cut up or used as is.",
-    "price": 2500,
-    "price_postapoc": 250,
     "material": [ "fur" ],
     "weight": "372 g",
     "volume": "465 ml",
@@ -332,6 +318,15 @@
     "category": "spare_parts",
     "name": { "str": "cotton sheet" },
     "description": "A 12-inch by 24-inch sheet of cotton fabric, suitable for making clothing.  You can use it to stop bleeding, but it is very wasteful.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_cotton_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork cotton sheet" },
+        "description": "A 12-inch by 24-inch sheet of cotton sewn together from patches of various clothing parts.  Suitable for making clothing if you lack proper material sheets."
+      }
+    ],
     "weight": "38 g",
     "volume": "47 ml",
     "//": "Medium weight cotton fabric with a GSM of 203",
@@ -344,21 +339,20 @@
     "color": "dark_gray"
   },
   {
-    "id": "sheet_cotton_patchwork",
-    "copy-from": "sheet_cotton",
-    "type": "GENERIC",
-    "name": { "str": "patchwork cotton sheet" },
-    "description": "A 12-inch by 24-inch sheet of cotton sewn together from patches of various clothing parts.  Suitable for making clothing if you lack proper material sheets.",
-    "//density": ".80 grams per mL, 203 GSM",
-    "price": 200,
-    "price_postapoc": 20
-  },
-  {
     "id": "sheet_faux_fur",
     "type": "GENERIC",
     "category": "spare_parts",
     "name": { "str": "faux fur sheet" },
     "description": "A 12-inch by 24-inch sheet of colorful faux fur, suitable for making clothing.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_faux_fur_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork faux fur sheet" },
+        "description": "A 12-inch by 24-inch sheet of faux fur sewn together from mismatched patches.  Suitable for making clothing if you lack proper material sheets, but the bright, clashing colors might end up making you look like a diseased Muppet."
+      }
+    ],
     "weight": "372 g",
     "volume": "465 ml",
     "//": "Based on 2000gsm faux fur",
@@ -369,21 +363,20 @@
     "color": "dark_gray"
   },
   {
-    "id": "sheet_faux_fur_patchwork",
-    "copy-from": "sheet_faux_fur",
-    "type": "GENERIC",
-    "name": { "str": "patchwork faux fur sheet" },
-    "description": "A 12-inch by 24-inch sheet of faux fur sewn together from mismatched patches.  Suitable for making clothing if you lack proper material sheets, but the bright, clashing colors might end up making you look like a diseased Muppet.",
-    "//": "12 inches by 24 inches with GSM of 2000",
-    "price": 1000,
-    "price_postapoc": 50
-  },
-  {
     "id": "sheet_felt",
     "type": "GENERIC",
     "category": "spare_parts",
     "name": { "str": "felt sheet" },
     "description": "A 12-inch by 24-inch sheet of felt, suitable for making clothing.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_felt_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork felt sheet" },
+        "description": "A 12-inch by 24-inch sheet of felt sewn together from patches of various clothing parts.  Suitable for making clothing if you lack proper material sheets."
+      }
+    ],
     "weight": "28 g",
     "volume": "145 ml",
     "//": "based on 150GSM felt",
@@ -394,43 +387,26 @@
     "color": "dark_gray"
   },
   {
-    "id": "sheet_felt_patchwork",
-    "copy-from": "sheet_felt",
-    "type": "GENERIC",
-    "name": { "str": "patchwork felt sheet" },
-    "description": "A 12-inch by 24-inch sheet of felt sewn together from patches.  Suitable for making clothing if you lack proper material sheets.",
-    "//": "150GSM felt",
-    "price": 500,
-    "price_postapoc": 50
-  },
-  {
     "id": "sheet_kevlar",
     "type": "GENERIC",
     "category": "spare_parts",
     "name": { "str": "Kevlar sheet" },
     "description": "A 12-inch by 24-inch sheet of loose-woven Kevlar synthetic fabric, suitable for making durable cut and stab resistant clothing.  While protective, this kind of Kevlar is not suitable for making ballistic gear due to the difference in weave tightness.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_kevlar_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork Kevlar sheet" },
+        "description": "A 12-inch by 24-inch sheet of fabric sewn together from Kevlar patches, suitable for making durable cut and stab resistant clothing.  This would be out of the question for ballistic Kevlar but the simpler, looser weave of this variety means it is fine to use if you lack proper material sheets."
+      }
+    ],
     "weight": "26 g",
     "volume": "51 ml",
     "//": "values taken from Duponts chemical reference. 144 GSM",
     "price": 900,
     "price_postapoc": 50,
     "material": [ "kevlar" ],
-    "symbol": "=",
-    "color": "dark_gray"
-  },
-  {
-    "id": "sheet_kevlar_patchwork",
-    "type": "GENERIC",
-    "category": "spare_parts",
-    "name": { "str": "patchwork Kevlar sheet" },
-    "description": "A 12-inch by 24-inch sheet of fabric sewn together from Kevlar patches, suitable for making durable cut and stab resistant clothing.  This would be out of the question for ballistic Kevlar but the simpler, looser weave of this variety means it is fine to use if you lack proper material sheets.",
-    "weight": "26 g",
-    "volume": "51 ml",
-    "//": "values taken from Duponts chemical reference. 144 GSM",
-    "price": 900,
-    "price_postapoc": 50,
-    "material": [ "kevlar" ],
-    "looks_like": "sheet_kevlar",
     "symbol": "=",
     "color": "dark_gray"
   },
@@ -455,6 +431,15 @@
     "category": "spare_parts",
     "name": { "str": "Lycra sheet" },
     "description": "A sheet of synthetic fabric blended with stretchy Lycra fibers, suitable for making flexible, yet strong clothing.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_lycra_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork Lycra sheet" },
+        "description": "A 12-inch by 24-inch sheet of fabric sewn together from Lycra patches.  Suitable for making flexible, yet strong clothing if you lack proper material sheets."
+      }
+    ],
     "weight": "33 g",
     "volume": "117 ml",
     "//": "180 GSM fabric",
@@ -497,21 +482,20 @@
     "color": "green"
   },
   {
-    "id": "sheet_lycra_patchwork",
-    "copy-from": "sheet_lycra",
-    "type": "GENERIC",
-    "name": { "str": "patchwork Lycra sheet" },
-    "description": "A 12-inch by 24-inch sheet of fabric sewn together from Lycra patches.  Suitable for making flexible, yet strong clothing if you lack proper material sheets.",
-    "//": "180GSM",
-    "price": 1000,
-    "price_postapoc": 50
-  },
-  {
     "id": "sheet_neoprene",
     "type": "GENERIC",
     "category": "spare_parts",
     "name": { "str": "neoprene sheet" },
     "description": "A sheet of neoprene, a synthetic rubber, suitable for making underwater gear.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_neoprene_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork neoprene sheet" },
+        "description": "A sheet of neoprene sewn together from patches, with waterproofed seams.  Suitable for making underwater gear if you lack proper material sheets."
+      }
+    ],
     "weight": "26 g",
     "volume": "186 ml",
     "//": "110GSM, 1mm thick neoprene",
@@ -522,21 +506,20 @@
     "color": "dark_gray"
   },
   {
-    "id": "sheet_neoprene_patchwork",
-    "copy-from": "sheet_neoprene",
-    "type": "GENERIC",
-    "name": { "str": "patchwork neoprene sheet" },
-    "description": "A sheet of neoprene sewn together from patches, with waterproofed seams.  Suitable for making underwater gear if you lack proper material sheets.",
-    "//": "Density of 1.23 grams per mL",
-    "price": 1000,
-    "price_postapoc": 60
-  },
-  {
     "id": "sheet_nomex",
     "type": "GENERIC",
     "category": "spare_parts",
     "name": { "str": "Nomex sheet" },
     "description": "A sheet of Nomex synthetic fabric, suitable for making heat-resistant clothing.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_nomex_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork Nomex sheet" },
+        "description": "A sheet of Nomex synthetic fabric, sewn together from patches using Nomex thread.  Suitable for making heat-resistant clothing if you lack proper material sheets."
+      }
+    ],
     "weight": "32 g",
     "volume": "75 ml",
     "//": "Taken from duponts chemical reference sheets. 170GSM",
@@ -547,21 +530,20 @@
     "color": "dark_gray"
   },
   {
-    "id": "sheet_nomex_patchwork",
-    "copy-from": "sheet_nomex",
-    "type": "GENERIC",
-    "name": { "str": "patchwork Nomex sheet" },
-    "description": "A sheet of Nomex synthetic fabric, sewn together from patches using Nomex thread.  Suitable for making heat-resistant clothing if you lack proper material sheets.",
-    "//": "Taken from duponts chemical reference sheets. 170GSM",
-    "price": 3000,
-    "price_postapoc": 80
-  },
-  {
     "id": "sheet_nylon",
     "type": "GENERIC",
     "category": "spare_parts",
     "name": { "str": "synthetic fabric sheet" },
     "description": "A sheet of synthetic fabric, suitable for making clothing.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_nylon_patchwork",
+        "type": "GENERIC",
+        "name": { "str_sp": "patchwork synthetic fabric sheet" },
+        "description": "A sheet of fabric, sewn together from synthetic fabric patches in a patchwork fashion.  Suitable for making most clothing."
+      }
+    ],
     "weight": "54 g",
     "volume": "48 ml",
     "//": ".25mm thick, 288 GSM (nylon 6,6 ranges 250-300 gsm)",
@@ -571,17 +553,6 @@
     "material": [ "nylon" ],
     "symbol": "=",
     "color": "dark_gray"
-  },
-  {
-    "id": "sheet_nylon_patchwork",
-    "copy-from": "sheet_nylon",
-    "type": "GENERIC",
-    "name": { "str_sp": "patchwork synthetic fabric sheet" },
-    "description": "A sheet of fabric, sewn together from synthetic fabric patches in a patchwork fashion.  Suitable for making most clothing, though it's much less time-efficient than if using proper material sheets.",
-    "//": ".25mm thick, 288 GSM (nylon 6,6 ranges 250-300 gsm)",
-    "//1": "1x2' sheet is 1858 cm^2 and at 288 gsm gives listed weight; density of 1.14g/cm^3 suggests about .25 mm thickness per sheet",
-    "price": 1000,
-    "price_postapoc": 40
   },
   {
     "id": "gambeson_batting",
@@ -673,6 +644,15 @@
     "color": "white",
     "name": { "str": "denim patch", "str_pl": "denim patches" },
     "description": "A small, 6 inch square patch of blue denim.  It could be used to repair items made of denim or stitched into patchwork sheets for tailoring projects.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_denim_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork denim sheet" },
+        "description": "A selection of various sections of denim, sewn together in a patchwork fashion.  Suitable for tailoring, if not fashion."
+      }
+    ],
     "price": 400,
     "price_postapoc": 12,
     "material": [ "denim" ],
@@ -682,24 +662,20 @@
     "category": "spare_parts"
   },
   {
-    "id": "sheet_denim_patchwork",
-    "type": "GENERIC",
-    "category": "spare_parts",
-    "name": { "str": "patchwork denim sheet" },
-    "description": "A selection of various sections of denim, sewn together in a patchwork fashion.  Suitable for tailoring, though it's much less time-efficient than if using proper material sheets.",
-    "weight": "80 g",
-    "volume": "95 ml",
-    "price_postapoc": 50,
-    "material": [ "denim" ],
-    "symbol": "=",
-    "color": "dark_gray"
-  },
-  {
     "id": "sheet_canvas",
     "type": "GENERIC",
     "category": "spare_parts",
     "name": { "str": "canvas sheet" },
     "description": "A 12 inch by 24 inch sheet of durable and waterproof waxed canvas fabric, suitable for making tough bags and clothing.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "sheet_canvas_patchwork",
+        "type": "GENERIC",
+        "name": { "str": "patchwork canvas sheet" },
+        "description": "A selection of various sections of canvas, sewn together in a patchwork fashion.  Suitable for tailoring."
+      }
+    ],
     "weight": "76 g",
     "volume": "48 ml",
     "//": "heavyweight cotton canvas with a GSM of 406",
@@ -759,20 +735,5 @@
     "weight": "9500 mg",
     "volume": "6 ml",
     "category": "spare_parts"
-  },
-  {
-    "id": "sheet_canvas_patchwork",
-    "type": "GENERIC",
-    "category": "spare_parts",
-    "name": { "str": "patchwork canvas sheet" },
-    "description": "A selection of various sections of canvas, sewn together in a patchwork fashion.  Suitable for tailoring, though it's much less time-efficient than if using proper material sheets.",
-    "//": "heavyweight cotton canvas with a GSM of 406",
-    "//1": "1x2' sheet is 1858 cm^2 and at 406 gsm gives listed weight; density of 1.6g/cm^3 suggests about .254 mm thickness per sheet - rounded down to .250",
-    "weight": "76 g",
-    "volume": "48 ml",
-    "price_postapoc": 50,
-    "material": [ "canvas" ],
-    "symbol": "=",
-    "color": "dark_gray"
   }
 ]

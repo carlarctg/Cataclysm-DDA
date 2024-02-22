@@ -539,11 +539,7 @@
       { "proficiency": "prof_closures", "required": false, "time_multiplier": 1.5 },
       { "proficiency": "prof_closures_waterproofing" }
     ],
-    "components": [
-      [ [ "stick", 10 ], [ "2x4", 5 ] ],
-      [ [ "leather", 64 ], [ "sheet_leather_patchwork", 8 ], [ "tanned_hide", 8 ] ],
-      [ [ "filament", 40, "LIST" ] ]
-    ]
+    "components": [ [ [ "stick", 10 ], [ "2x4", 5 ] ], [ [ "leather", 64 ], [ "tanned_hide", 8 ] ], [ [ "filament", 40, "LIST" ] ] ]
   },
   {
     "type": "recipe",
@@ -614,7 +610,7 @@
     ],
     "components": [
       [ [ "stick", 6 ] ],
-      [ [ "leather", 16 ], [ "sheet_leather", 4 ], [ "sheet_leather_patchwork", 4 ], [ "tanned_hide", 4 ] ],
+      [ [ "leather", 16 ], [ "tanned_hide", 4 ] ],
       [ [ "large_damaged_shelter_kit", 1 ] ],
       [ [ "filament", 100, "LIST" ] ]
     ]
@@ -637,7 +633,7 @@
       { "proficiency": "prof_leatherworking_basic", "required": false, "time_multiplier": 2, "skill_penalty": 0.5 },
       { "proficiency": "prof_furriery" }
     ],
-    "components": [ [ [ "fur", 24 ], [ "tanned_pelt", 4 ], [ "sheet_fur_patchwork", 4 ] ], [ [ "filament", 20, "LIST" ] ] ]
+    "components": [ [ [ "fur", 24 ], [ "tanned_pelt", 4 ],  ], [ [ "filament", 20, "LIST" ] ] ]
   },
   {
     "type": "recipe",
@@ -2132,7 +2128,7 @@
     "autolearn": true,
     "using": [ [ "sewing_standard", 10 ] ],
     "proficiencies": [ { "proficiency": "prof_leatherworking_basic" } ],
-    "components": [ [ [ "sheet_leather_patchwork", 1 ], [ "tanned_hide", 1 ], [ "sheet_fur_patchwork", 1 ], [ "tanned_pelt", 1 ] ] ]
+    "components": [ [ [ "tanned_hide", 1 ], [ "tanned_pelt", 1 ] ] ]
   },
   {
     "type": "recipe",
@@ -3357,11 +3353,7 @@
     "using": [ [ "sewing_standard", 10 ] ],
     "byproducts": [ [ "splinter", 6 ], [ "scrap_leather", 5 ] ],
     "proficiencies": [ { "proficiency": "prof_leatherworking_basic" } ],
-    "components": [
-      [ [ "2x4", 2 ] ],
-      [ [ "nails", 12, "LIST" ] ],
-      [ [ "sheet_leather_patchwork", 2 ], [ "tanned_hide", 2 ], [ "sheet_fur_patchwork", 2 ], [ "tanned_pelt", 2 ] ]
-    ]
+    "components": [ [ [ "2x4", 2 ] ], [ [ "nails", 12, "LIST" ] ], [ [ "tanned_hide", 2 ], [ "tanned_pelt", 2 ] ] ]
   },
   {
     "type": "recipe",

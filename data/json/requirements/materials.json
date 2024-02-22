@@ -224,19 +224,19 @@
     "id": "fabric_fur",
     "type": "requirement",
     "//": "Materials used for crafting fur clothing",
-    "components": [ [ [ "fur", 8 ], [ "sheet_fur_patchwork", 1 ], [ "tanned_pelt", 1 ] ] ]
+    "components": [ [ [ "fur", 8 ], [ "tanned_pelt", 1 ] ] ]
   },
   {
     "id": "fabric_fur_pelt",
     "type": "requirement",
     "//": "Materials used for crafting fur clothing",
-    "components": [ [ [ "fur", 8 ], [ "sheet_fur_patchwork", 1 ], [ "tanned_pelt", 1 ] ] ]
+    "components": [ [ [ "fur", 8 ], [ "tanned_pelt", 1 ] ] ]
   },
   {
     "id": "fabric_leather_hide",
     "type": "requirement",
     "//": "Materials used for crafting leather clothing.",
-    "components": [ [ [ "leather", 8 ], [ "sheet_leather_patchwork", 1 ], [ "tanned_hide", 1 ] ] ]
+    "components": [ [ [ "leather", 8 ], [ "tanned_hide", 1 ] ] ]
   },
   {
     "id": "fabric_leather_fur_hide",
@@ -248,8 +248,8 @@
         [ "fur", 8 ],
         [ "tanned_hide", 1 ],
         [ "tanned_pelt", 1 ],
-        [ "sheet_leather_patchwork", 1 ],
-        [ "sheet_fur_patchwork", 1 ]
+        ,
+        
       ]
     ]
   },

@@ -306,10 +306,10 @@
     ],
     "components": [
       [ [ "filament_durable", 150, "LIST" ] ],
-      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 4 ], [ "sheet_nomex_patchwork", 4 ] ],
+      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 4 ], [ "sheet_nomex", 4 ] ],
       [ [ "thread_nomex", 20 ] ],
       [ [ "boots_steel", 1 ], [ "sneakers_steel", 1 ] ],
-      [ [ "sheet_faux_fur", 2 ], [ "sheet_faux_fur_patchwork", 2 ] ],
+      [ [ "sheet_faux_fur", 2 ], [ "sheet_faux_fur", 2 ] ],
       [ [ "faux_fur", 8 ] ]
     ],
     "byproducts": [ [ "scrap_faux_fur", 4 ] ]
@@ -329,10 +329,10 @@
     ],
     "components": [
       [ [ "filament_durable", 125, "LIST" ] ],
-      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 3 ], [ "sheet_nomex_patchwork", 3 ] ],
+      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 3 ], [ "sheet_nomex", 3 ] ],
       [ [ "thread_nomex", 18 ] ],
       [ [ "boots_steel", 1 ], [ "sneakers_steel", 1 ] ],
-      [ [ "sheet_faux_fur", 2 ], [ "sheet_faux_fur_patchwork", 2 ] ],
+      [ [ "sheet_faux_fur", 2 ], [ "sheet_faux_fur", 2 ] ],
       [ [ "faux_fur", 4 ] ]
     ],
     "byproducts": [ [ "scrap_faux_fur", 7 ] ]
@@ -368,9 +368,9 @@
     ],
     "components": [
       [ [ "filament_durable", 225, "LIST" ] ],
-      [ [ "xlnomex_socks", 1 ], [ "sheet_nomex", 6 ], [ "sheet_nomex_patchwork", 6 ] ],
+      [ [ "xlnomex_socks", 1 ], [ "sheet_nomex", 6 ], [ "sheet_nomex", 6 ] ],
       [ [ "thread_nomex", 30 ] ],
-      [ [ "sheet_faux_fur", 4 ], [ "sheet_faux_fur_patchwork", 4 ] ],
+      [ [ "sheet_faux_fur", 4 ], [ "sheet_faux_fur", 4 ] ],
       [ [ "faux_fur", 12 ] ]
     ],
     "byproducts": [ [ "scrap_faux_fur", 12 ] ]
@@ -641,7 +641,7 @@
     ],
     "components": [
       [ [ "filament_durable", 60, "LIST" ] ],
-      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 4 ], [ "sheet_nomex_patchwork", 4 ] ],
+      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 4 ], [ "sheet_nomex", 4 ] ],
       [ [ "thread_nomex", 20 ] ],
       [ [ "rubber_tire_chunk", 1 ] ]
     ]
@@ -660,7 +660,7 @@
     ],
     "components": [
       [ [ "filament_durable", 50, "LIST" ] ],
-      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 3 ], [ "sheet_nomex_patchwork", 3 ] ],
+      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 3 ], [ "sheet_nomex", 3 ] ],
       [ [ "thread_nomex", 18 ] ],
       [ [ "rubber_tire_chunk", 1 ] ]
     ]
@@ -682,7 +682,7 @@
     ],
     "components": [
       [ [ "filament_durable", 90, "LIST" ] ],
-      [ [ "xlnomex_socks", 1 ], [ "sheet_nomex", 6 ], [ "sheet_nomex_patchwork", 6 ] ],
+      [ [ "xlnomex_socks", 1 ], [ "sheet_nomex", 6 ], [ "sheet_nomex", 6 ] ],
       [ [ "thread_nomex", 30 ] ],
       [ [ "rubber_tire_chunk", 1 ] ]
     ]
@@ -795,7 +795,7 @@
     ],
     "components": [
       [ [ "filament_durable", 100, "LIST" ] ],
-      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 4 ], [ "sheet_nomex_patchwork", 4 ] ],
+      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 4 ], [ "sheet_nomex", 4 ] ],
       [ [ "thread_nomex", 20 ] ],
       [ [ "boots_steel", 1 ], [ "sneakers_steel", 1 ] ]
     ]
@@ -815,7 +815,7 @@
     ],
     "components": [
       [ [ "filament_durable", 80, "LIST" ] ],
-      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 3 ], [ "sheet_nomex_patchwork", 3 ] ],
+      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 3 ], [ "sheet_nomex", 3 ] ],
       [ [ "thread_nomex", 18 ] ],
       [ [ "boots_steel", 1 ], [ "sneakers_steel", 1 ] ]
     ]
@@ -922,10 +922,10 @@
     ],
     "components": [
       [ [ "filament_durable", 150, "LIST" ] ],
-      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 4 ], [ "sheet_nomex_patchwork", 4 ] ],
+      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 4 ], [ "sheet_nomex", 4 ] ],
       [ [ "thread_nomex", 20 ] ],
       [ [ "boots_steel", 1 ], [ "sneakers_steel", 1 ] ],
-      [ [ "sheet_fur_patchwork", 2 ], [ "tanned_pelt", 2 ], [ "boots_fur", 1 ] ],
+      [ [ "tanned_pelt", 2 ], [ "boots_fur", 1 ] ],
       [ [ "fur", 8 ] ]
     ]
   },
@@ -944,10 +944,10 @@
     ],
     "components": [
       [ [ "filament_durable", 125, "LIST" ] ],
-      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 3 ], [ "sheet_nomex_patchwork", 3 ] ],
+      [ [ "nomex_socks", 1 ], [ "sheet_nomex", 3 ], [ "sheet_nomex", 3 ] ],
       [ [ "thread_nomex", 18 ] ],
       [ [ "boots_steel", 1 ], [ "sneakers_steel", 1 ] ],
-      [ [ "tanned_pelt", 2 ], [ "sheet_fur_patchwork", 2 ], [ "boots_fur", 1 ] ],
+      [ [ "tanned_pelt", 2 ], [ "boots_fur", 1 ] ],
       [ [ "fur", 4 ] ]
     ]
   },
@@ -981,9 +981,9 @@
     ],
     "components": [
       [ [ "filament_durable", 225, "LIST" ] ],
-      [ [ "xlnomex_socks", 1 ], [ "sheet_nomex", 6 ], [ "sheet_nomex_patchwork", 6 ] ],
+      [ [ "xlnomex_socks", 1 ], [ "sheet_nomex", 6 ], [ "sheet_nomex", 6 ] ],
       [ [ "thread_nomex", 30 ] ],
-      [ [ "sheet_fur_patchwork", 4 ], [ "tanned_pelt", 4 ] ],
+      [ [ "tanned_pelt", 4 ] ],
       [ [ "fur", 12 ] ]
     ]
   },
@@ -1017,7 +1017,7 @@
     ],
     "components": [
       [ [ "filament_durable", 150, "LIST" ] ],
-      [ [ "xlnomex_socks", 1 ], [ "sheet_nomex", 6 ], [ "sheet_nomex_patchwork", 6 ] ],
+      [ [ "xlnomex_socks", 1 ], [ "sheet_nomex", 6 ], [ "sheet_nomex", 6 ] ],
       [ [ "thread_nomex", 30 ] ]
     ]
   },
@@ -1085,7 +1085,7 @@
     "time": "1 m 30 s",
     "reversible": true,
     "autolearn": true,
-    "components": [ [ [ "sheet_fur_patchwork", 2 ], [ "tanned_pelt", 2 ] ] ],
+    "components": [ [ [ "tanned_pelt", 2 ] ] ],
     "flags": [ "BLIND_HARD" ]
   },
   {
@@ -1097,7 +1097,7 @@
     "skill_used": "tailor",
     "time": "1 m 30 s",
     "autolearn": true,
-    "components": [ [ [ "sheet_faux_fur_patchwork", 2 ] ] ],
+    "components": [ [ [ "sheet_faux_fur", 2 ] ] ],
     "flags": [ "BLIND_HARD" ],
     "byproducts": [ [ "scrap_faux_fur", 6 ] ]
   },
@@ -1111,7 +1111,7 @@
     "time": "1 m 30 s",
     "reversible": true,
     "autolearn": true,
-    "components": [ [ [ "sheet_leather_patchwork", 2 ] ] ],
+    "components": [ [ [ "sheet_leather", 2 ] ] ],
     "flags": [ "BLIND_HARD" ]
   },
   {
@@ -1124,7 +1124,7 @@
     "time": "1 m",
     "reversible": true,
     "autolearn": true,
-    "components": [ [ [ "sheet_felt_patchwork", 2 ] ] ],
+    "components": [ [ [ "sheet_felt", 2 ] ] ],
     "flags": [ "BLIND_HARD" ]
   },
   {
