@@ -1,0 +1,13 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "rare_guns",
+    "name": "Rare Guns",
+    "authors": [ "Carlarc" ],
+    "maintainers": [ "Carlarc" ],
+    "description": "Adds various weapons which would normally be far too rare to be reasonably included in the game.",
+    "category": "content",
+    "dependencies": [ "dda" ],
+    "version": "0.1"
+  }
+]

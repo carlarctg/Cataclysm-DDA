@@ -1,0 +1,54 @@
+[
+  {
+    "id": "medusa",
+    "copy-from": "pistol_revolver",
+    "looks_like": "sw_619",
+    "type": "GUN",
+    "name": { "str": "multi-caliber revolver" },
+    "description": "Officially, this revolver can fit 25 different calibers in its chambers, but this comes at the cost of having a rather finicky reloading process and somewhat reduced accuracy. Only a few hundred of these were made before the company went bankrupt, and somehow this one has ended up in your hands.",
+    "ascii_picture": "redhawk",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "medusa",
+        "name": { "str": "M47 Medusa" },
+        "description": "Officially, this revolver can fit 25 different calibers in its chambers, but this comes at the cost of having a rather finicky reloading process and somewhat reduced accuracy. Only a few hundred of these were made before the company went bankrupt, and somehow this one has ended up in your hands."
+      }
+    ],
+    "weight": "1080 g",
+    "volume": "675 ml",
+    "longest_side": "25 cm",
+    "barrel_length": "152 mm",
+    "price": 861000,
+    "price_postapoc": 10500,
+    "material": [ "steel" ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "//": "It can't fit the 9x18mm the Makarov uses because they're LIARS and it's actually 9.2mm.",
+    "ammo": [ "357mag", "38", "38super", "380", "9mm" ],
+    "dispersion": 320,
+    "durability": 6,
+    "blackpowder_tolerance": 56,
+    "clip_size": 6,
+    "reload": 350,
+    "valid_mod_locations": [
+      [ "barrel", 1 ],
+      [ "bore", 1 ],
+      [ "grip", 1 ],
+      [ "mechanism", 4 ],
+      [ "rail", 1 ],
+      [ "sights", 1 ],
+      [ "stock", 1 ],
+      [ "underbarrel", 1 ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": { "357mag": 6, "38": 6, "38super": 6, "380": 6, "9mm": 6 },
+        "allowed_speedloaders": [  ]
+      }
+    ],
+    "melee_damage": { "bash": 8 }
+  }
+]
