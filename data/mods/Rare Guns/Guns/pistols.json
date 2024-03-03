@@ -93,7 +93,8 @@
     "price_postapoc": 8500,
     "to_hit": -1,
     "material": [ "steel" ],
-    "ammo": [ "9mm" ],
+    "//ammo": [ "9mm" ],
+    "//": "The ammo is added with the sliders, so that the gun can be made unusable when stripped.",
     "valid_mod_locations": [
       [ "barrel", 1 ],
       [ "brass catcher", 1 ],
@@ -105,7 +106,7 @@
       [ "stock", 1 ],
       [ "underbarrel", 1 ]
     ],
-    "//": "No sight slot, not by itself. The Alien has interchangeable slides instead.",
+    "//2": "No sight slot, not by itself. The Alien has interchangeable slides instead.",
     "built_in_mods": "laugo_slide_iron",
     "ranged_damage": { "damage_type": "bullet", "amount": 0 },
     "dispersion": 320,
@@ -182,5 +183,104 @@
     "integral_longest_side": "0 cm",
     "material": [ "steel" ],
     "add_mod": [ [ "sights" ] ]
+  },
+  {
+    "id": "welrod",
+    "copy-from": "pistol_base",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "name": { "str": "bicycle pump" },
+    "description": "A rather odd-looking bicycle pump that appears to have... iron sights? Something isn't right here.",
+    "variants": [
+      {
+        "id": "welrod",
+        "name": { "str": "Welrod 9mm Mk I" },
+        "description": "An extremely bizarre looking gun, the Welrod was a clandestine, integrally-suppressed, bolt-action pistol utilized by British agents, featuring what is described best as a 'Hollywood quiet' level of noise when firing alongside a design which attempts to hide its true purpose."
+      }
+    ],
+    "weight": "1235 g",
+    "volume": "150 ml",
+    "longest_side": "95 mm",
+    "barrel_length": "83 mm",
+    "price": 68000,
+    "price_postapoc": 2500,
+    "to_hit": -1,
+    "material": [ "steel" ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [ "9mm" ],
+    "built_in_mods": "welsuppressor",
+    "ranged_damage": { "damage_type": "bullet", "amount": -1 },
+    "dispersion": 600,
+    "durability": 6,
+    "blackpowder_tolerance": 88,
+    "min_cycle_recoil": 450,
+    "flags": [ "ALLOWS_BODY_BLOCK" ],
+    "weapon_category": [ "AUTOMATIC_PISTOLS" ],
+    "pocket_data": [ { "magazine_well": "100 ml", "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "welmag" ] } ],
+    "melee_damage": { "bash": 7 }
+  },
+  {
+    "id": "welmag",
+    "type": "MAGAZINE",
+    "name": { "str": "Welrod 9mm Mk I 6-round magazine" },
+    "description": "The Welrod's design intentionally excludes a pistol grip, to improve concealability. As such, its magazines also function as a plastic grip.",
+    "weight": "45 g",
+    "volume": "40 ml",
+    "longest_side": "40 mm",
+    "price": 2900,
+    "price_postapoc": 100,
+    "material": [ "plastic", "steel" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [ "9mm" ],
+    "reload_time": 120,
+    "flags": [ "MAG_COMPACT" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "9mm": 6 } } ]
+  },
+  {
+    "id": "welsuppressor",
+    "copy-from": "suppressor",
+    "type": "GUNMOD",
+    "name": { "str": "Welrod integrated suppressor" },
+    "description": "The Welrod's suppressor effectively contains the entirety of the barrel inside, which makes the gun almost completely silent.",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "longest_side": "0 cm",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "rubber" ],
+    "consume_chance": 1,
+    "consume_divisor": 600,
+    "loudness_modifier": -75,
+    "flags": [ "IRREMOVABLE" ],
+    "melee_damage": { "bash": 3 }
+  },
+  {
+    "id": "veterinary_pistol",
+    "copy-from": "welrod",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "name": { "str": "veterinary pistol" },
+    "description": "An integrally silenced .45 ACP pistol that fits 1911 magazines. Designed to put down animals (or zombies) quickly, painlessly, and soundlessly.",
+    "variants": [
+      {
+        "id": "veterinary_pistol",
+        "name": { "str": "Station SIX-45 veterinary pistol" },
+        "description": "An integrally silenced .45 ACP pistol that fits 1911 magazines. Designed to put down animals (or zombies) quickly, painlessly, and soundlessly. Originally made in 9mm in Old England, it was later imported into the US and made to fit its pistol regulations as the Station SIX-9 and SIX-45."
+      }
+    ],
+    "weight": "940 g",
+    "volume": "350 ml",
+    "longest_side": "285 mm",
+    "barrel_length": "165 mm",
+    "price": 38000,
+    "price_postapoc": 9000,
+    "ammo": [ "45" ],
+    "built_in_mods": "vetsuppressor",
+    "ranged_damage": { "damage_type": "bullet", "amount": -2 },
+    "dispersion": 600,
+    "durability": 8,
+    "pocket_data": [ { "magazine_well": "250 ml", "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "m1911mag", "m1911bigmag" ] } ]
   }
 ]
