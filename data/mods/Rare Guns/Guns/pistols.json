@@ -15,8 +15,8 @@
         "description": "Officially, this revolver can fit 25 different calibers in its chambers, but this comes at the cost of having a rather finicky reloading process and somewhat reduced accuracy. Only a few hundred of these were made before the company went bankrupt, and somehow this one has ended up in your hands."
       }
     ],
-    "weight": "1080 g",
-    "volume": "675 ml",
+    "weight": "1333 g",
+    "volume": "450 ml",
     "longest_side": "25 cm",
     "barrel_length": "152 mm",
     "price": 861000,
@@ -50,5 +50,137 @@
       }
     ],
     "melee_damage": { "bash": 8 }
+  },
+  {
+    "id": "laugo_alien",
+    "copy-from": "glock_17",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "name": { "str": "competition pistol" },
+    "description": "A rather recent introduction to the competition shooting market, this pistol has several innovations such as a non-reciprocating slide, a very low bore axis, and more, resulting in a highly accurate and reliable sidearm with little to no recoil. Good luck finding the magazines, though.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "laugo_alien_iron",
+        "name": { "str": "Laugo Alien" },
+        "description": "A rather recent introduction to the competition shooting market, the Laugo Alien has several innovations such as a non-reciprocating slide, a very low bore axis, and more, resulting in a highly accurate and reliable sidearm with little to no recoil. Good luck finding the magazines, though.",
+        "built_in_mods": "laugo_slide_iron"
+      },
+      {
+        "id": "laugo_alien_reddot",
+        "name": { "str": "Laugo Alien" },
+        "description": "A rather recent introduction to the competition shooting market, the Laugo Alien has several innovations such as a non-reciprocating slide, a very low bore axis, and more, resulting in a highly accurate and reliable sidearm with little to no recoil. Good luck finding the magazines, though.",
+        "built_in_mods": "laugo_slide_reddot"
+      },
+      {
+        "id": "laugo_alien_picatinny",
+        "name": { "str": "Laugo Alien" },
+        "description": "A rather recent introduction to the competition shooting market, the Laugo Alien has several innovations such as a non-reciprocating slide, a very low bore axis, and more, resulting in a highly accurate and reliable sidearm with little to no recoil. Good luck finding the magazines, though.",
+        "built_in_mods": "laugo_slide_picatinny"
+      },
+      {
+        "id": "laugo_creator",
+        "name": { "str": "Laugo Alien Creator 500" },
+        "description": "A rather recent introduction to the competition shooting market, the Laugo Alien has several innovations such as a non-reciprocating slide, a very low bore axis, and more, resulting in a highly accurate and reliable sidearm with little to no recoil. This version has a 1911-style grip, as opposed to the Glock or Luger style of the original version.",
+        "built_in_mods": "laugo_slide_reddot"
+      }
+    ],
+    "weight": "1009 g",
+    "volume": "292 ml",
+    "longest_side": "210 mm",
+    "barrel_length": "124 mm",
+    "price": 700000,
+    "price_postapoc": 8500,
+    "to_hit": -1,
+    "material": [ "steel" ],
+    "ammo": [ "9mm" ],
+    "valid_mod_locations": [
+      [ "barrel", 1 ],
+      [ "brass catcher", 1 ],
+      [ "grip", 1 ],
+      [ "mechanism", 4 ],
+      [ "muzzle", 1 ],
+      [ "rail", 1 ],
+      [ "slide", 1 ],
+      [ "stock", 1 ],
+      [ "underbarrel", 1 ]
+    ],
+    "//": "No sight slot, not by itself. The Alien has interchangeable slides instead.",
+    "built_in_mods": "laugo_slide_iron",
+    "ranged_damage": { "damage_type": "bullet", "amount": 0 },
+    "dispersion": 320,
+    "durability": 7,
+    "blackpowder_tolerance": 36,
+    "min_cycle_recoil": 340,
+    "pocket_data": [ { "magazine_well": "250 ml", "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "laugo_mag" ] } ],
+    "melee_damage": { "bash": 10 }
+  },
+  {
+    "id": "laugo_mag",
+    "type": "MAGAZINE",
+    "name": { "str": "Laugo Alien 17-round magazine" },
+    "description": "Made for the Laugo Alien, this magazine holds 17 rounds.",
+    "weight": "70 g",
+    "volume": "75 ml",
+    "longest_side": "111 mm",
+    "price": 2900,
+    "price_postapoc": 100,
+    "material": [ "plastic", "steel" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [ "9mm" ],
+    "reload_time": 140,
+    "flags": [ "MAG_COMPACT" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "9mm": 17 } } ]
+  },
+  {
+    "id": "laugo_slide_iron",
+    "type": "GUNMOD",
+    "name": { "str": "Laugo Alien iron sight slide" },
+    "description": "Uniquely, the Laugo Alien uses replaceable slides instead of a sight rail. This one contains basic iron sights.",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "longest_side": "120 mm",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "integral_longest_side": "0 cm",
+    "price": 10000,
+    "price_postapoc": 1000,
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "slide",
+    "mod_targets": [ "laugo_alien" ],
+    "install_time": "15 s",
+    "ammo_modifier": [ "9mm" ],
+    "min_skills": [ [ "weapon", 1 ] ],
+    "add_mod": [ [ "sights mount" ] ]
+  },
+  {
+    "id": "laugo_slide_reddot",
+    "copy-from": "laugo_slide_iron",
+    "type": "GUNMOD",
+    "name": { "str": "Laugo Alien red dot sight slide" },
+    "description": "Uniquely, the Laugo Alien uses replaceable slides instead of a sight rail. This one contains a sleek red dot sight.",
+    "weight": "18 g",
+    "volume": "15 ml",
+    "longest_side": "120 mm",
+    "integral_volume": "100 ml",
+    "integral_weight": "100 g",
+    "add_mod": [ [  ] ]
+  },
+  {
+    "id": "laugo_slide_picatinny",
+    "type": "GUNMOD",
+    "name": { "str": "Laugo Alien custom rail slide" },
+    "description": "Uniquely, the Laugo Alien uses replaceable slides instead of a sight rail. This one a Picatinny rail for attaching a normal sight, but no iron sights.",
+    "weight": "13 g",
+    "volume": "13 ml",
+    "longest_side": "120 mm",
+    "integral_volume": "33 ml",
+    "integral_weight": "33 g",
+    "integral_longest_side": "0 cm",
+    "material": [ "steel" ],
+    "add_mod": [ [ "sights" ] ]
   }
 ]
