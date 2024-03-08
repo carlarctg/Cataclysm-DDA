@@ -270,10 +270,10 @@
         "description": "An integrally silenced .45 ACP pistol that fits 1911 magazines. Designed to put down animals (or zombies) quickly, painlessly, and soundlessly. Originally made in 9mm in Old England, it was later imported into the US and made to fit its pistol regulations as the Station SIX-9 and SIX-45."
       }
     ],
-    "weight": "940 g",
-    "volume": "350 ml",
-    "longest_side": "285 mm",
-    "barrel_length": "165 mm",
+    "weight": "905 g",
+    "volume": "300 ml",
+    "longest_side": "255 mm",
+    "barrel_length": "130 mm",
     "price": 38000,
     "price_postapoc": 9000,
     "ammo": [ "45" ],
@@ -282,5 +282,22 @@
     "dispersion": 600,
     "durability": 8,
     "pocket_data": [ { "magazine_well": "250 ml", "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "m1911mag", "m1911bigmag" ] } ]
+  },
+  {
+    "id": "vetsuppressor",
+    "copy-from": "suppressor",
+    "type": "GUNMOD",
+    "name": { "str": "veterinary suppressor" },
+    "description": "This suppressor is designed to keep shots quiet for veterinarian mercy killings, so as to not upset other nearby animals. Allegedly.",
+    "weight": "35 g",
+    "volume": "50 ml",
+    "longest_side": "35 cm",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "rubber" ],
+    "consume_chance": 1,
+    "consume_divisor": 600,
+    "loudness_modifier": -75,
+    "melee_damage": { "bash": 3 }
   }
 ]
