@@ -299,5 +299,61 @@
     "consume_divisor": 600,
     "loudness_modifier": -75,
     "melee_damage": { "bash": 3 }
+  },
+  {
+    "id": "slingshot_crossbow",
+    "looks_like": "crossbow",
+    "copy-from": "compcrossbow",
+    "type": "GUN",
+    "reload_noise_volume": 5,
+    "symbol": "(",
+    "color": "red",
+    "name": { "str": "slingshot crossbow" },
+    "description": "A high-grade hunting crossbow that boasts the unique ability to fire either 40 ball bearings, cycled via an integrated forward grip pump, or one crossbow bolt. It is remarkably accurate for its small size.",
+    "variants": [
+      {
+        "id": "slingshot_crossbow",
+        "name": { "str": "RS-X7 'Doomsday' slingshot crossbow" },
+        "description": "A high-grade hunting crossbow that boasts the unique ability to fire either 40 ball bearings, cycled via an integrated forward grip pump, or one crossbow bolt. It is remarkably accurate for its small size."
+      }
+    ],
+    "price": 200000,
+    "material": [ "steel", "plastic" ],
+    "flags": [ "PRIMITIVE_RANGED_WEAPON" ],
+    "skill": "rifle",
+    "min_strength": 7,
+    "ammo": [ "bolt", "pebble" ],
+    "weight": "3100 g",
+    "volume": "1750 ml",
+    "longest_side": "95 cm",
+    "price_postapoc": 9000,
+    "to_hit": 0,
+    "ranged_damage": { "damage_type": "stab", "amount": 11 },
+    "range": 20,
+    "loudness": 10,
+    "dispersion": 300,
+    "durability": 6,
+    "clip_size": 1,
+    "reload": 1200,
+    "valid_mod_locations": [
+      [ "grip", 1 ],
+      [ "mechanism", 2 ],
+      [ "rail", 1 ],
+      [ "sights", 1 ],
+      [ "sling", 1 ],
+      [ "stock", 1 ],
+      [ "underbarrel", 1 ],
+      [ "dampening", 1 ]
+    ],
+    "built_in_mods": "slingshot_grip",
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "bolt": 1, "pebble": 40 } } ],
+    "melee_damage": { "bash": 9 }
+  },
+  {
+    "id": "slingshot_grip",
+    "type": "GUNMOD",
+    "copy-from": "grip",
+    "name": { "str": "integrated front grip" },
+    "flags": [ "PUMP_RAIL_COMPATIBLE", "IRREMOVABLE" ]
   }
 ]

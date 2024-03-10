@@ -1,0 +1,78 @@
+[
+  {
+    "id": "pump_action_bow_magazine",
+    "type": "GUNMOD",
+    "name": { "str": "pump action compound bow magazine" },
+    "description": "Yes, you read that right. This ridiculous attachment is effectively a rectangle that holds up to 5 arrows and places the last one into firing position when the bow's string is nocked. It additionally includes a Picatinny rail and a thumb-trigger bow release, helping with dispersion and handling. Only fits on modern compound bows.",
+    "variants": [
+      {
+        "id": "pump_action_bow_magazine",
+        "name": { "str": "Steambow Fenris compound bow magazine" },
+        "description": "This ridiculous attachment is effectively a rectangle that holds up to 5 arrows and places the last one into firing position when the bow's string is nocked. It additionally includes a Picatinny rail and a thumb-trigger bow release, helping with dispersion and handling. Only fits on modern compound bows."
+      }
+    ],
+    "weight": "1422 g",
+    "volume": "550 ml",
+    "longest_side": "83 cm",
+    "price": 240000,
+    "price_postapoc": 10000,
+    "material": [ "aluminum" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "arrow rest",
+    "mod_targets": [ "compbow", "compbow_high", "compbow_low", "compgreatbow" ],
+    "install_time": "1 m",
+    "pocket_mods": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "arrow": 5 } } ],
+    "min_skills": [ [ "weapon", 1 ] ],
+    "dispersion_modifier": -50,
+    "handling_modifier": 2,
+    "//": "It has a Picatinny rail, because of course it does.",
+    "add_mod": [ [ "sights", 1 ] ]
+  },
+  {
+    "id": "gatling_grip",
+    "type": "GUNMOD",
+    "name": { "str": "FG-15 gatling grip" },
+    "description": "A rather silly answer to the problem of the semi-auto AR-15, this grip has a retractable crank connected to a pin inside the grip that hits the action, effectively turning the gun into a hand-crank gatling gun.",
+    "weight": "113 g",
+    "volume": "250 ml",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": 25000,
+    "price_postapoc": 1500,
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "red",
+    "location": "grip",
+    "mod_targets": [ "modular_ar15", "ar_pistol", "oa93" ],
+    "install_time": "10 m",
+    "dispersion_modifier": 0,
+    "durability_modifier": -1,
+    "min_skills": [ [ "rifle", 2 ] ],
+    "use_action": {
+      "type": "transform",
+      "msg": "You extend the hand-crank.",
+      "menu_text": "Extend Crank",
+      "target": "gatling_grip_extended",
+      "moves": 60
+    }
+  },
+  {
+    "id": "gatling_grip_extended",
+    "type": "GUNMOD",
+    "name": { "str": "FG-15 gatling grip (extended)", "str_pl": "FG-15 gatling grips (extended)" },
+    "description": "A rather silly answer to the problem of the semi-auto AR-15, this grip has a retractable crank connected to a pin inside the grip that hits the action, effectively turning the gun into a hand-crank gatling gun. This one is extended and ready to crank that hog.",
+    "dispersion_modifier": 50,
+    "handling_modifier": -1,
+    "durability_modifier": -1,
+    "min_skills": [ [ "rifle", 2 ] ],
+    "use_action": {
+      "type": "transform",
+      "msg": "You retract the hand-crank.",
+      "menu_text": "Retract Crank",
+      "target": "gatling_grip",
+      "moves": 60
+    },
+    "mode_modifier": [ [ "BURST", "half-crank", 3 ], [ "AUTO", "full-crank", 6 ] ]
+  }
+]
