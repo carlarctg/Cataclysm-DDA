@@ -1,0 +1,128 @@
+[
+  {
+    "id": "boots_denim",
+    "copy-from": "boots_denim",
+    "type": "ARMOR",
+    "name": { "str": "joots" }
+  },
+  {
+    "id": "shoes_denim",
+    "copy-from": "shoes_denim",
+    "type": "ARMOR",
+    "name": { "str": "joes" }
+  },
+  {
+    "id": "cloak_denim",
+    "copy-from": "cloak_denim",
+    "type": "ARMOR",
+    "name": { "str": "jloak" }
+  },
+  {
+    "id": "gloves_denim",
+    "copy-from": "gloves_denim",
+    "type": "ARMOR",
+    "name": { "str": "jloves" }
+  },
+  {
+    "id": "gloves_denim_fingerless",
+    "copy-from": "gloves_denim_fingerless",
+    "type": "ARMOR",
+    "name": { "str": "jingerless jloves" }
+  },
+  {
+    "id": "vest_jean",
+    "copy-from": "vest_jean",
+    "type": "ARMOR",
+    "name": { "str": "jean jest" }
+  },
+  {
+    "id": "motorcycle_pants",
+    "copy-from": "motorcycle_pants",
+    "type": "ARMOR",
+    "name": { "str": "jotorcycle jeans" }
+  },
+  {
+    "id": "jeans_mod",
+    "copy-from": "jeans_mod",
+    "type": "ARMOR",
+    "name": { "str": "jarmored jeans" }
+  },
+  {
+    "id": "jeans_mod_ch",
+    "copy-from": "jeans_mod_ch",
+    "type": "ARMOR",
+    "name": { "str": "jardened jarmored jeans" }
+  },
+  {
+    "id": "jeans_ripped",
+    "copy-from": "jeans_ripped",
+    "type": "ARMOR",
+    "name": { "str": "jipped jeans" }
+  },
+  {
+    "id": "jeans_vintage",
+    "copy-from": "jeans_vintage",
+    "type": "ARMOR",
+    "name": { "str": "jintage jeans" }
+  },
+  {
+    "id": "jeans_skinny",
+    "copy-from": "jeans_skinny",
+    "type": "ARMOR",
+    "name": { "str": "jinny jeans" }
+  },
+  {
+    "id": "skirt_denim",
+    "copy-from": "skirt_denim",
+    "type": "ARMOR",
+    "name": { "str": "jirt" }
+  },
+  {
+    "id": "backpack_denim",
+    "copy-from": "backpack_denim",
+    "type": "ARMOR",
+    "name": { "str": "jackpack" }
+  },
+  {
+    "id": "denim_overalls",
+    "copy-from": "denim_overalls",
+    "type": "ARMOR",
+    "name": { "str": "joveralls" }
+  },
+  {
+    "id": "jacket_jean_mod",
+    "copy-from": "jacket_jean_mod",
+    "type": "ARMOR",
+    "name": { "str": "jarmored jean jacket" }
+  },
+  {
+    "id": "jacket_jean_mod_ch",
+    "copy-from": "jacket_jean_mod_ch",
+    "type": "ARMOR",
+    "name": { "str": "jardened jarmored jean jacket" }
+  },
+  {
+    "id": "vest_jean_mod",
+    "copy-from": "vest_jean_mod",
+    "type": "ARMOR",
+    "name": { "str": "jarmored jean jest" }
+  },
+  {
+    "id": "vest_jean_mod_ch",
+    "copy-from": "vest_jean_mod_ch",
+    "type": "ARMOR",
+    "name": { "str": "jardened jarmored jean jest" }
+  },
+  {
+    "id": "denim_shirt",
+    "copy-from": "denim_shirt",
+    "type": "ARMOR",
+    "name": { "str": "jirt" }
+  },
+  {
+    "id": "jeans_red",
+    "copy-from": "jeans_red",
+    "type": "ARMOR",
+    "name": { "str": "jed jeans" }
+  }
+]
