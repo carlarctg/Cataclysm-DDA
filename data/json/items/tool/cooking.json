@@ -648,6 +648,7 @@
     "qualities": [ [ "CONTAIN", 1 ] ],
     "tick_action": "MULTICOOKER_TICK",
     "use_action": [ "MULTICOOKER", { "type": "link_up", "cable_length": 2, "charge_rate": "1000 W" } ],
+    "revert_to": "multi_cooker_filled",
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -666,6 +667,7 @@
     "copy-from": "multi_cooker",
     "name": { "str": "multi-cooker - cooking", "str_pl": "multi-cookers - cooking" },
     "description": "A professional-grade multi-cooker, with a battery slot for camping trips or tailgating.  There is a dish cooking inside it.",
+    "revert_to": "multi_cooker",
     "delete": { "qualities": [ "CONTAIN" ] }
   },
   {

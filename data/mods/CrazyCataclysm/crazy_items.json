@@ -401,5 +401,76 @@
     "material": [ "steel" ],
     "symbol": "#",
     "color": "light_gray"
+  },
+  {
+    "id": "bio_tools",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "Internal Crockpot CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "A CBM that installs a multi-cooker, located right in the center of your chest (after some organ rearrangement). Be the life of the party!",
+    "price": 8000000,
+    "price_postapoc": 50000,
+    "difficulty": 10
+  },
+  {
+    "id": "bio_tools",
+    "type": "bionic",
+    "name": { "str": "Internal Crockpot CBM" },
+    "description": "An internal crockpot located in the middle of the chest cavity after a rather invasive rearranging of organs. The cavity has an oversized door that pops out to serve the pot on-demand. The delicious aromas emanating from current and previous stews make you a more pleasant person to be around.",
+    "occupied_bodyparts": [ [ "torso", 10 ] ],
+    "passive_pseudo_items": [ "cbm_multi_cooker" ],
+    "social_modifiers": { "persuade": 15, "lie": 0, "intimidate": -10 },
+    "flags": [ "BIONIC_SHOCKPROOF" ]
+  },
+  {
+    "id": "cbm_multi_cooker",
+    "copy-from": "multi_cooker",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "internal crockpot" },
+    "description": "An internal crockpot for cooking stew on the field for your cyborg buddies. You could also use it as general storage, but c'mon. Don't be boring. It has a rather large oven-like superalloy door for serving, which also doubles as armor, lest a zombie reach in and steal the pot roast under your nose.",
+    "material": [ "steel", "plastic", "superalloy" ],
+    "armor": [
+      {
+        "material": [
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 1.5 },
+          { "type": "steel", "covered_by_mat": 50, "thickness": 0.5 },
+          { "type": "plastic", "covered_by_mat": 25, "thickness": 0.15 }
+        ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ],
+        "coverage": 60,
+        "encumbrance": 5
+      }
+    ],
+    "symbol": ";",
+    "color": "red",
+    "flags": [
+      "INTEGRATED",
+      "UNBREAKABLE",
+      "PERSONAL",
+      "WATER_FRIENDLY",
+      "SOFT",
+      "NO_REPAIR",
+      "ALLOWS_NATURAL_ATTACKS",
+      "TRADER_AVOID",
+      "USES_BIONIC_POWER"
+    ],
+    "qualities": [ [ "CONTAIN", 1 ] ],
+    "ammo": [ "battery" ],
+    "charges_per_use": 350,
+    "charged_qualities": [ [ "COOK", 5 ], [ "CHEM", 1 ] ],
+    "tick_action": "MULTICOOKER_TICK",
+    "use_action": [ "MULTICOOKER" ],
+    "revert_to": "cbm_multi_cooker_filled"
+  },
+  {
+    "id": "cbm_multi_cooker_filled",
+    "type": "TOOL_ARMOR",
+    "copy-from": "cbm_multi_cooker",
+    "name": { "str": "internal crockpot - cookin'", "str_pl": "internal crockpot - cookin'" },
+    "description": "An internal crockpot for cooking stew on the field for your cyborg buddies. This one is brewing up a delicious meal. The aroma makes you a more pleasant person to be around.",
+    "delete": { "qualities": [ "CONTAIN" ] },
+    "revert_to": "cbm_multi_cooker"
   }
 ]

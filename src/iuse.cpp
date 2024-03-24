@@ -7579,7 +7579,10 @@ std::optional<int> iuse::multicooker( Character *p, item *it, const tripoint &po
             it->erase_var( "DISH" );
             it->erase_var( "COOKTIME" );
             it->erase_var( "RECIPE" );
-            it->convert( itype_multi_cooker, p );
+            //it->convert( itype_multi_cooker, p );
+            if( it->type->revert_to ) {
+                it->convert( *it->type->revert_to, p )};
+
         }
         return 0;
     }
@@ -7698,7 +7701,9 @@ std::optional<int> iuse::multicooker( Character *p, item *it, const tripoint &po
             p->add_msg_if_player( m_good,
                                   _( "The screen flashes blue symbols and scales as the multi-cooker begins to shake." ) );
 
-            it->convert( itype_multi_cooker_filled, p ).active = true;
+            //it->convert( itype_multi_cooker_filled, p ).active = true;
+            if( it->type->revert_to ) {
+                it->convert( *it->type->revert_to, p )};
             it->ammo_consume( charges_to_start - charge_buffer, pos, p );
 
             p->practice( skill_cooking, meal->difficulty * 3 ); //little bonus
@@ -7785,7 +7790,9 @@ std::optional<int> iuse::multicooker_tick( Character *p, item *it, const tripoin
     if( it->ammo_remaining( p, true ) < charge_buffer ) {
         it->active = false;
         it->erase_var( "RECIPE" );
-        it->convert( itype_multi_cooker, p );
+        //it->convert( itype_multi_cooker, p );
+        if( it->type->revert_to ) {
+            it->convert( *it->type->revert_to, p )};
         //drain the buffer amount given at activation
         it->ammo_consume( charge_buffer, pos, p );
         p->add_msg_if_player( m_info,
@@ -7819,7 +7826,10 @@ std::optional<int> iuse::multicooker_tick( Character *p, item *it, const tripoin
 
         it->active = false;
         it->erase_var( "COOKTIME" );
-        it->convert( itype_multi_cooker, p );
+        //it->convert( itype_multi_cooker, p );
+        if( it->type->revert_to ) {
+            it->convert( *it->type->revert_to, p )};
+
         if( it->can_contain( meal ).success() ) {
             it->put_in( meal, pocket_type::CONTAINER );
         } else {
