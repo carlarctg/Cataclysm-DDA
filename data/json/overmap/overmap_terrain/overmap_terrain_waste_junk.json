@@ -1,6 +1,33 @@
 [
   {
     "type": "overmap_terrain",
+    "abstract": "generic_sewer",
+    "name": "sewer",
+    "color": "green",
+    "see_cost": 5,
+    "extras": "sewer"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "sewer",
+    "copy-from": "generic_sewer",
+    "flags": [ "LINEAR" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "urban_25_sewer_connector",
+    "copy-from": "generic_sewer",
+    "sym": "┐"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "sewer_connector",
+    "copy-from": "generic_sewer",
+    "sym": "X",
+    "flags": [ "SHOULD_NOT_SPAWN" ]
+  },
+  {
+    "type": "overmap_terrain",
     "id": [ "sewage_treatment_0_0_0", "sewage_treatment_1_0_0", "sewage_treatment_1_1_0" ],
     "name": "sewage treatment plant",
     "sym": "P",
@@ -18,7 +45,7 @@
   },
   {
     "type": "overmap_terrain",
-    "id": [ "sewage_treatment_1_0_roof", "sewage_treatment_1_1_roof" ],
+    "id": [ "sewage_treatment_1_0_roof", "sewage_treatment_1_1_roof", "sewage_treatment_1_0_upper_roof" ],
     "name": "sewage treatment plant roof",
     "sym": "P",
     "color": "red",
@@ -60,7 +87,7 @@
   },
   {
     "type": "overmap_terrain",
-    "id": "toxic_dump",
+    "id": [ "toxic_dump", "toxic_dump_roof" ],
     "name": "toxic waste dump",
     "sym": "D",
     "color": "pink",
@@ -74,6 +101,10 @@
       "haz_sar_1_2",
       "haz_sar_1_3",
       "haz_sar_1_4",
+      "haz_sar_1_1_2",
+      "haz_sar_1_2_2",
+      "haz_sar_1_3_2",
+      "haz_sar_1_4_2",
       "haz_sar_b_1",
       "haz_sar_b_2",
       "haz_sar_b_3",
@@ -84,15 +115,6 @@
     "color": "pink",
     "see_cost": 5,
     "flags": [ "RISK_HIGH" ]
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "sewer",
-    "name": "sewer",
-    "color": "green",
-    "see_cost": 5,
-    "extras": "sewer",
-    "flags": [ "LINEAR" ]
   },
   {
     "type": "overmap_terrain",
@@ -129,12 +151,6 @@
     "color": "green",
     "see_cost": 999,
     "mondensity": 2
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "sewer_connector",
-    "copy-from": "pump_station_3",
-    "flags": [ "SHOULD_NOT_SPAWN" ]
   },
   {
     "type": "overmap_terrain",
@@ -188,7 +204,16 @@
   },
   {
     "type": "overmap_terrain",
-    "id": [ "junkyard_1a", "junkyard_roof_1a", "junkyard_1b", "junkyard_roof_1b", "junkyard_2a", "junkyard_2b" ],
+    "id": [
+      "junkyard_1a",
+      "junkyard_roof_1a",
+      "junkyard_1b",
+      "junkyard_roof_1b",
+      "junkyard_2a",
+      "junkyard_roof_2a",
+      "junkyard_2b",
+      "junkyard_roof_2b"
+    ],
     "copy-from": "generic_city_building_no_sidewalk",
     "name": "junkyard",
     "sym": "J",
@@ -211,6 +236,7 @@
       "ws_regional_dump_1_0",
       "ws_regional_dump_2_0",
       "ws_regional_dump_3_0",
+      "ws_regional_dump_3_0_roof",
       "ws_regional_dump_0_1",
       "ws_regional_dump_1_1",
       "ws_regional_dump_2_1",
@@ -227,6 +253,7 @@
       "ws_biker_dump_1_0",
       "ws_biker_dump_2_0",
       "ws_biker_dump_3_0",
+      "ws_biker_dump_3_0_roof",
       "ws_biker_dump_0_1",
       "ws_biker_dump_1_1",
       "ws_biker_dump_2_1",
@@ -254,7 +281,7 @@
   },
   {
     "type": "overmap_terrain",
-    "id": [ "cs_open_sewer", "cs_open_sewer_undergound" ],
+    "id": [ "cs_open_sewer", "cs_open_sewer_roof", "cs_open_sewer_undergound" ],
     "copy-from": "generic_city_building",
     "name": "open sewer",
     "sym": "s",

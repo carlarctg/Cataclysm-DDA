@@ -13,6 +13,8 @@ GG_DIR = os.path.normpath(os.path.join(
 AMMO_TYPE_WHITELIST = {
     '40x46mm',  # Grenade
     'atgm',  # Rocket
+    'atlatl',
+    'bolt_ballista',
     'barb',
     'battery',
     'BB',
@@ -51,7 +53,19 @@ ID_WHITELIST = {
     'l_bak_223',
     'pneumatic_shotgun',
     'rifle_223',
+    'ksg-25',
+    'raging_judge',
+    'american_180',
+    'ppsh',
+    'af2011a1_38super',
     # Magazines
+    'a180mag',
+    'a180mag1',
+    'a180mag2',
+    'a180mag3',
+    'a180mag4',
+    'af2011a1mag',
+    '454_speedloader6',
     '223_speedloader5',
     'coin_wrapper',
     'exodiisapramag5',
@@ -60,7 +74,6 @@ ID_WHITELIST = {
     'robofac_gun_40mm_10rd',
     'bio_shotgun_gun',
     'gasfilter_med',
-
     'gasfilter_sm',
     'matchhead_30carbine',
     'matchhead_30carbine_jsp',

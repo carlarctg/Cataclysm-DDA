@@ -1168,6 +1168,9 @@ int get_terminal_height();
  */
 bool is_draw_tiles_mode();
 
+int get_window_width();
+int get_window_height();
+
 /**
  * Make changes made to the display visible to the user immediately.
  *
@@ -1218,9 +1221,9 @@ class tab_list
 {
     private:
         size_t _index = 0;
-        std::vector<std::string> *_list;
+        const std::vector<std::string> *_list;
     public:
-        explicit tab_list( std::vector<std::string> &_list ) : _list( &_list ) {
+        explicit tab_list( const std::vector<std::string> &_list ) : _list( &_list ) {
         }
 
         void last() {

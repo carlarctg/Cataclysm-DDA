@@ -149,7 +149,7 @@
       "bitch",
       "bootlicker",
       "bugger",
-      "butchery refuse",
+      { "text": { "ctxt": "<name_b>", "str": "butchery refuse" } },
       "butthead",
       "butt-licker",
       "chucklefuck",
@@ -160,9 +160,9 @@
       "damned <name_b>",
       "dildo",
       "dimwit",
-      "dog",
+      { "text": { "ctxt": "<name_b>", "str": "dog" } },
       "dumbshit",
-      "dumpster",
+      { "text": { "ctxt": "<name_b>", "str": "dumpster" } },
       "dumpster fire",
       "dunderfuck",
       "effing <name_b>",
@@ -941,7 +941,7 @@
     "category": "<move>",
     "//": "Generic orders to move,mostly used as part of firing warnings.",
     "text": [
-      "Move",
+      { "text": { "ctxt": "<move>", "str": "Move" } },
       "Move your ass",
       "Get out of the way",
       "Shift it",
@@ -1023,7 +1023,7 @@
       "There's not enough room for me here.",
       "This spot is squeezing the life out of me.",
       "I can hardly breathe, crammed in like this.",
-      "I'm like a sardine over here!.",
+      "I'm like a sardine over here!",
       "Ugh, I'm getting squashed.",
       "How about we stop and stretch our legs?",
       "I could use a break from being wedged in like this.",
@@ -1876,7 +1876,7 @@
     "type": "snippet",
     "category": "<zombie>",
     "text": [
-      "zombie",
+      { "text": { "ctxt": "<zombie>", "str": "zombie" } },
       "Z",
       "shambler",
       "goo-puker",
@@ -2026,7 +2026,7 @@
   {
     "type": "snippet",
     "category": "<granny_name_g>",
-    "text": [ "child", "my child", "dear", "my dear", "friend", "survivor" ]
+    "text": [ { "text": { "ctxt": "<granny_name_g>", "str": "child" } }, "my child", "dear", "my dear", "friend", "survivor" ]
   },
   {
     "type": "snippet",

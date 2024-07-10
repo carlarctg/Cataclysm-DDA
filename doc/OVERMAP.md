@@ -274,9 +274,9 @@ an exhaustive example...
     "mapgen_four_way": [ { "method": "builtin", "name": "road_four_way" } ],
     "travel_cost_type": "field",
     "eoc": {
-      "id": "EOC_REFUGEE_CENTER_GENERATE",
-      "condition": { "compare_num": [ { "global_val": "var", "var_name": "refugee_centers", "default": 0 }, "<", { "const": 1 } ] },
-      "effect": [ { "arithmetic": [ { "global_val": "var", "var_name": "refugee_centers" }, "++" ] } ]
+      "id": "EOC_REFUGEE_CENTER_GENERATE", 
+      "condition": { "math": [ "refugee_centers", "<", "1" ] }, 
+      "effect": [ { "math": [ "refugee_centers", "++" ] } ]
     }
 }
 ```
@@ -423,7 +423,7 @@ Depending on the subtype, there are further relevant fields:
     "overmaps": [
       { "point": [ 0, 0, 0 ], "overmap": "campground_1a_north", "locations": [ "forest_edge" ] },
       { "point": [ 1, 0, 0 ], "overmap": "campground_1b_north" },
-      { "point": [ 0, 1, 0 ], "overmap": "campground_2a_north" },
+      { "point": [ 0, 1, 0 ], "overmap": "campground_2a_north", "camp": "isherwood_family", "camp_name": "Campground camp" },
       { "point": [ 1, 1, 0 ], "overmap": "campground_2b_north" }
     ],
     "connections": [ { "point": [ 1, -1, 0 ], "terrain": "road", "connection": "local_road", "from": [ 1, 0, 0 ] } ],
@@ -444,6 +444,8 @@ Depending on the subtype, there are further relevant fields:
 | `point`     | `[ x, y, z]` of the overmap terrain within the special.                                                                                                                                    |
 | `overmap`   | Id of the `overmap_terrain` to place at the location. If ommited no overmap_terrain is placed but the point will still be checked for valid locations when deciding if placement is valid. |
 | `locations` | List of `overmap_location` ids that this overmap terrain may be placed on. Overrides the specials overall `locations` field.                                                               |
+| `camp`      | Will make a NPC-owned camp spawn here when given a value. The entered value is the ID of the faction that owns this camp.                                                                  |
+| `camp_name` | Name that will be displayed on the overmap for the camp.                                                                                                                                   |
 
 ### Connections
 

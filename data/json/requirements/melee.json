@@ -16,10 +16,8 @@
         [ "bone_knife", -1 ],
         [ "knuckle_katar", -1 ],
         [ "sharp_toothbrush", -1 ],
-        [ "knife_steak", -1 ],
-        [ "knife_paring", -1 ],
-        [ "knife_carving", -1 ],
-        [ "knife_bread", -1 ],
+        [ "knife_small", -1 ],
+        [ "knife_large", -1 ],
         [ "screwdriver", -1 ],
         [ "scissors_child", -1 ],
         [ "scissors_medical", -1 ],
@@ -68,7 +66,6 @@
     "//": "Any quality weapon designed to hook your oppenents and their gear in a fight.  Reserved for the good stuff.",
     "tools": [
       [
-        [ "spear_survivor", -1 ],
         [ "scythe_war", -1 ],
         [ "poleaxe", -1 ],
         [ "ji", -1 ],
@@ -100,10 +97,9 @@
         [ "tanto_inferior", -1 ],
         [ "kirpan_cheap", -1 ],
         [ "enfield_bayonet", -1 ],
-        [ "knife_butcher", -1 ],
-        [ "knife_chef", -1 ],
-        [ "knife_vegetable_cleaver", -1 ],
-        [ "knife_meat_cleaver", -1 ]
+        [ "knife_huge", -1 ],
+        [ "knife_large", -1 ],
+        [ "knife_cleaver", -1 ]
       ]
     ]
   },
@@ -262,7 +258,6 @@
         [ "sword_nail", -1 ],
         [ "sword_crude", -1 ],
         [ "sword_sheets_welded", -1 ],
-        [ "sword_sheets_bolted", -1 ],
         [ "sword_metal", -1 ]
       ]
     ]
@@ -349,7 +344,6 @@
         [ "sword_nail", -1 ],
         [ "sword_crude", -1 ],
         [ "sword_sheets_welded", -1 ],
-        [ "sword_sheets_bolted", -1 ],
         [ "sword_metal", -1 ],
         [ "longsword_inferior", -1 ],
         [ "longsword_fake", -1 ],
@@ -390,7 +384,6 @@
         [ "sword_wood_large", -1 ],
         [ "sword_crude_large", -1 ],
         [ "sword_sheets_welded_large", -1 ],
-        [ "sword_sheets_bolted_large", -1 ],
         [ "sword_metal_large", -1 ],
         [ "zweihander_inferior", -1 ],
         [ "zweihander_fake", -1 ],
@@ -438,7 +431,6 @@
     "//": "Any real, cutting weapons that can be used like an axe; large, heavy head with two sharp sides on a pole.",
     "tools": [
       [
-        [ "fire_ax", -1 ],
         [ "ax", -1 ],
         [ "hatchet", -1 ],
         [ "copper_ax", -1 ],
@@ -455,6 +447,7 @@
     "//": "Any real, cutting weapons that can be used like an axe; large, heavy head with two sharp sides on a pole.",
     "tools": [
       [
+        [ "fire_ax", -1 ],
         [ "battleaxe", -1 ],
         [ "lc_battleaxe", -1 ],
         [ "mc_battleaxe", -1 ],
@@ -527,6 +520,9 @@
       [
         [ "club_wooden_large", -1 ],
         [ "homewrecker", -1 ],
+        [ "glass_macuahuitl", -1 ],
+        [ "aztec_sword_stone", -1 ],
+        [ "aztec_sword_scrap", -1 ],
         [ "hammer_sledge", -1 ],
         [ "hammer_sledge_short", -1 ],
         [ "hammer_sledge_heavy", -1 ],
@@ -546,7 +542,11 @@
         [ "lucern_hammer", -1 ],
         [ "2h_club_kanabo_studded", -1 ],
         [ "2h_club_kanabo_spiked", -1 ],
-        [ "lucern_hammer", -1 ]
+        [ "lc_aztec_sword", -1 ],
+        [ "mc_aztec_sword", -1 ],
+        [ "hc_aztec_sword", -1 ],
+        [ "ch_aztec_sword", -1 ],
+        [ "qt_aztec_sword", -1 ]
       ]
     ]
   },
@@ -620,6 +620,9 @@
     "//": "Any basic weapon you can use as a cutting polearm.",
     "tools": [
       [
+        [ "aztec_spear_scrap", -1 ],
+        [ "aztec_spear_glass", -1 ],
+        [ "aztec_spear_stone", -1 ],
         [ "makeshift_halberd", -1 ],
         [ "halberd_fake", -1 ],
         [ "makeshift_glaive", -1 ],
@@ -639,11 +642,15 @@
     "//": "Any real, top-heavy cutting weapons with a long pole and a blade on the end, designed to swing side-to-side.  Think like a sword with a really long handle.",
     "tools": [
       [
+        [ "lc_aztec_spear", -1 ],
+        [ "mc_aztec_spear", -1 ],
+        [ "hc_aztec_spear", -1 ],
+        [ "ch_aztec_spear", -1 ],
+        [ "qt_aztec_spear", -1 ],
         [ "glaive", -1 ],
         [ "halberd", -1 ],
         [ "lajatang", -1 ],
         [ "naginata", -1 ],
-        [ "spear_survivor", -1 ],
         [ "scythe_war", -1 ],
         [ "poleaxe", -1 ],
         [ "lucern_hammer", -1 ],

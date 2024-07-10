@@ -84,7 +84,8 @@
       "NO_BREATHE",
       "REVIVES",
       "FILTHY",
-      "PARALYZEVENOM"
+      "PARALYZEVENOM",
+      "GUILT_CHILD"
     ]
   },
   {
@@ -137,7 +138,7 @@
       "REVIVES",
       "BILE_BLOOD",
       "PUSH_MON",
-      "PATH_AVOID_DANGER_1",
+      "PATH_AVOID_DANGER",
       "FILTHY",
       "PARALYZEVENOM"
     ]

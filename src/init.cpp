@@ -20,7 +20,6 @@
 #include "butchery_requirements.h"
 #include "cata_assert.h"
 #include "cata_scope_helpers.h"
-#include "cata_utility.h"
 #include "character_modifier.h"
 #include "city.h"
 #include "climbing.h"
@@ -46,11 +45,11 @@
 #include "flag.h"
 #include "gates.h"
 #include "harvest.h"
+#include "input.h"
 #include "item_action.h"
 #include "item_category.h"
 #include "item_factory.h"
 #include "itype.h"
-#include "json.h"
 #include "json_loader.h"
 #include "loading_ui.h"
 #include "lru_cache.h"
@@ -79,7 +78,6 @@
 #include "overmap.h"
 #include "overmap_connection.h"
 #include "overmap_location.h"
-#include "path_info.h"
 #include "profession.h"
 #include "profession_group.h"
 #include "proficiency.h"
@@ -98,7 +96,6 @@
 #include "speech.h"
 #include "speed_description.h"
 #include "start_location.h"
-#include "string_formatter.h"
 #include "test_data.h"
 #include "text_snippets.h"
 #include "translations.h"
@@ -252,11 +249,12 @@ void DynamicDataLoader::initialize()
     add( "jmath_function", &jmath_func::load_func );
     add( "var_migration", &global_variables::load_migrations );
     add( "connect_group", &connect_group::load );
-    add( "fault", &fault::load );
-    add( "fault_fix", &fault_fix::load );
+    add( "fault", &faults::load_fault );
+    add( "fault_fix", &faults::load_fix );
     add( "relic_procgen_data", &relic_procgen_data::load_relic_procgen_data );
     add( "effect_on_condition", &effect_on_conditions::load );
     add( "field_type", &field_types::load );
+    add( "field_type_migration", &field_type_migrations::load );
     add( "weather_type", &weather_types::load );
     add( "ammo_effect", &ammo_effects::load );
     add( "emit", &emit::load_emit );
@@ -268,6 +266,7 @@ void DynamicDataLoader::initialize()
     add( "bionic", &bionic_data::load_bionic );
     add( "bionic_migration", &bionic_data::load_bionic_migration );
     add( "profession", &profession::load_profession );
+    add( "profession_blacklist", &profession_blacklist::load_profession_blacklist );
     add( "profession_group", &profession_group::load_profession_group );
     add( "profession_item_substitutions", &profession::load_item_substitutions );
     add( "proficiency", &proficiency::load_proficiencies );
@@ -282,6 +281,7 @@ void DynamicDataLoader::initialize()
     add( "mutation", &mutation_branch::load_trait );
     add( "furniture", &load_furniture );
     add( "terrain", &load_terrain );
+    add( "ter_furn_migration", &ter_furn_migrations::load );
     add( "monstergroup", &MonsterGroupManager::LoadMonsterGroup );
     add( "MONSTER_BLACKLIST", &MonsterGroupManager::LoadMonsterBlacklist );
     add( "MONSTER_WHITELIST", &MonsterGroupManager::LoadMonsterWhitelist );
@@ -301,8 +301,8 @@ void DynamicDataLoader::initialize()
 
     // json/colors.json would be listed here, but it's loaded before the others (see init_colors())
     // Non Static Function Access
-    add( "snippet", []( const JsonObject & jo ) {
-        SNIPPET.load_snippet( jo );
+    add( "snippet", []( const JsonObject & jo, const std::string & src ) {
+        SNIPPET.load_snippet( jo, src );
     } );
     add( "item_group", []( const JsonObject & jo ) {
         item_controller->load_item_group( jo );
@@ -408,8 +408,10 @@ void DynamicDataLoader::initialize()
     add( "weapon_category", &weapon_category::load_weapon_categories );
     add( "martial_art", &load_martial_art );
     add( "climbing_aid", &climbing_aid::load_climbing_aid );
+    add( "attack_vector", &attack_vector::load_attack_vectors );
     add( "effect_type", &load_effect_type );
     add( "oter_id_migration", &overmap::load_oter_id_migration );
+    add( "camp_migration", &overmap::load_oter_id_camp_migration );
     add( "overmap_terrain", &overmap_terrains::load );
     add( "construction_category", &construction_categories::load );
     add( "construction_group", &construction_groups::load );
@@ -579,9 +581,9 @@ void DynamicDataLoader::unload_data()
     effect_on_conditions::reset();
     event_transformation::reset();
     faction_template::reset();
-    fault_fix::reset();
-    fault::reset();
+    faults::reset();
     field_types::reset();
+    field_type_migrations::reset();
     gates::reset();
     harvest_drop_type::reset();
     harvest_list::reset();
@@ -614,7 +616,9 @@ void DynamicDataLoader::unload_data()
     overmap_special_migration::reset();
     overmap_terrains::reset();
     overmap::reset_oter_id_migrations();
+    overmap::reset_oter_id_camp_migrations();
     profession::reset();
+    profession_blacklist::reset();
     proficiency::reset();
     proficiency_category::reset();
     mood_face::reset();
@@ -648,6 +652,7 @@ void DynamicDataLoader::unload_data()
     SNIPPET.clear_snippets();
     spell_type::reset_all();
     start_locations::reset();
+    ter_furn_migrations::reset();
     ter_furn_transform::reset();
     trap::reset();
     unload_talk_topics();
@@ -745,6 +750,7 @@ void DynamicDataLoader::finalize_loaded_data( loading_ui &ui )
             { _( "Crafting recipes" ), &recipe_dictionary::finalize },
             { _( "Recipe groups" ), &recipe_group::check },
             { _( "Martial arts" ), &finalize_martial_arts },
+            { _( "Scenarios" ), &scenario::finalize },
             { _( "Climbing aids" ), &climbing_aid::finalize },
             { _( "NPC classes" ), &npc_class::finalize_all },
             { _( "Missions" ), &mission_type::finalize },
@@ -754,7 +760,7 @@ void DynamicDataLoader::finalize_loaded_data( loading_ui &ui )
             { _( "Achievements" ), &achievement::finalize },
             { _( "Damage info orders" ), &damage_info_order::finalize_all },
             { _( "Widgets" ), &widget::finalize },
-            { _( "Fault fixes" ), &fault_fix::finalize },
+            { _( "Faults" ), &faults::finalize },
 #if defined(TILES)
             { _( "Tileset" ), &load_tileset },
 #endif
@@ -771,7 +777,9 @@ void DynamicDataLoader::finalize_loaded_data( loading_ui &ui )
         ui.proceed();
     }
 
-    check_consistency( ui );
+    if( !get_option<bool>( "SKIP_VERIFICATION" ) ) {
+        check_consistency( ui );
+    }
     finalized = true;
 }
 
@@ -791,8 +799,10 @@ void DynamicDataLoader::check_consistency( loading_ui &ui )
             },
             { _( "Vitamins" ), &vitamin::check_consistency },
             { _( "Weather types" ), &weather_types::check_consistency },
+            { _( "Weapon Categories" ), &weapon_category::verify_weapon_categories },
             { _( "Effect on conditions" ), &effect_on_conditions::check_consistency },
             { _( "Field types" ), &field_types::check_consistency },
+            { _( "Field type migrations" ), &field_type_migrations::check },
             { _( "Ammo effects" ), &ammo_effects::check_consistency },
             { _( "Emissions" ), &emit::check_consistency },
             { _( "Effect types" ), &effect_type::check_consistency },
@@ -805,8 +815,7 @@ void DynamicDataLoader::check_consistency( loading_ui &ui )
                 }
             },
             { _( "Materials" ), &materials::check },
-            { _( "Faults" ), &fault::check_consistency },
-            { _( "Fault fixes" ), &fault_fix::check_consistency },
+            { _( "Faults" ), &faults::check_consistency },
             { _( "Vehicle parts" ), &vehicles::parts::check },
             { _( "Vehicle part migrations" ), &vpart_migration::check },
             { _( "Mapgen definitions" ), &check_mapgen_definitions },
@@ -819,11 +828,11 @@ void DynamicDataLoader::check_consistency( loading_ui &ui )
             },
             { _( "Monster groups" ), &MonsterGroupManager::check_group_definitions },
             { _( "Furniture and terrain" ), &check_furniture_and_terrain },
+            { _( "Furniture and terrain migrations" ), &ter_furn_migrations::check },
             { _( "Constructions" ), &check_constructions },
             { _( "Crafting recipes" ), &recipe_dictionary::check_consistency },
             { _( "Professions" ), &profession::check_definitions },
             { _( "Profession groups" ), &profession_group::check_profession_group_consistency },
-            { _( "Scenarios" ), &scenario::check_definitions },
             { _( "Martial arts" ), &check_martialarts },
             { _( "Climbing aid" ), &climbing_aid::check_consistency },
             { _( "Mutations" ), &mutation_branch::check_consistency },
